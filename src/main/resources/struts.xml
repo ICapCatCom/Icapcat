@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
+<struts>
+	<!-- Struts。xml的配置文件 -->
+    <!-- 所有匹配*.action的请求都由struts2处理 -->
+    <constant name="struts.action.extension" value="action,," />
+    <!-- 是否启用开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- struts配置文件改动后，是否重新加载 -->
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <!-- 请求参数的编码方式 -->
+    <constant name="struts.i18n.encoding" value="utf-8" />
+    <!-- 每次HTTP请求系统都重新加载资源文件 -->
+    <constant name="struts.i18n.reload" value="true" />
+    <!-- 让struts2支持动态方法调用 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    
+	<!--新建一个package，name随意，extends自struts-default namespace是你访问的路径是否添加其他的名字    / 为不添加 -->
+    <package name="strutsTest" extends="struts-default" namespace="/">
+    	<!-- 编写action，name为地址栏输入时用的名字，class为class文件的位置 -->
+        <action name="hello" class="com.icapcat.action.HelloAction">
+        	<!-- name 为刚才编写的action类中，execute返回的值       index.jsp的意思是返回到index.jsp页面 -->
+        	<result name="success">index.jsp</result>
+        </action>
+    </package>
+</struts>

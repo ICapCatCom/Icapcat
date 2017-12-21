@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE hibernate-mapping PUBLIC   
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.icapcat.domain.InfoEntity" table="info">
+		<id name="id" type="int" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="title" type="string" column="title">
+		</property>
+		<property name="description" type="string" column="description">
+		</property>
+		<property name="url" type="string" column="url">
+		</property>
+	</class>
+</hibernate-mapping>
